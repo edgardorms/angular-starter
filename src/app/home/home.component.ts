@@ -1,7 +1,7 @@
 import { Component, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Tarea } from '../../models/tareas.model';
+import { Tarea } from '../models/tareas.model';
 
 @Component({
   selector: 'app-home',
