@@ -6,6 +6,7 @@
         <button (click)="toggleTheme()" class="btn theme-btn">
             {{ theme() === 'light' ? '🌙' : '☀️' }}
         </button>
+        <button class="btn" routerLink="/todoapp">Go to TodoApp</button>
     </div>
 
     @if (isVisible()) {
