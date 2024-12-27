@@ -1,7 +1,8 @@
 .controls {
   margin-bottom: 20px;
   display: flex;
-  gap: 10px;
+  gap: 15px;
+  justify-content: center;
 }
 
 .btn {
@@ -10,20 +11,37 @@
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
+  background: linear-gradient(
+    45deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  color: var(--color-text);
+  box-shadow: 0 4px 6px rgba(30, 60, 114, 0.3);
 }
 
 .btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  background: linear-gradient(
+    45deg,
+    var(--color-secondary),
+    var(--color-primary)
+  );
 }
 
 .theme-btn {
   font-size: 1.2em;
+  background: transparent;
+  border: 2px solid var(--color-text);
 }
 
 .report-container {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: var(--color-light);
+  border: 1px solid #d1d9e6;
+  box-shadow: 0 4px 6px rgba(30, 60, 114, 0.3);
 }
 
 .fade-in {
@@ -43,26 +61,31 @@
 
 /* Tema oscuro */
 .dark {
-  background-color: #1a1a1a;
-  color: white;
+  background-color: var(--color-accent);
+  color: var(--color-text);
   min-height: 100vh;
   padding: 20px;
 }
 
 .dark .btn {
-  background: #333;
-  color: white;
+  background: linear-gradient(45deg, var(--color-accent), var(--color-primary));
+  color: var(--color-text);
+  border: 2px solid var(--color-text);
 }
 
 /* Tema claro */
 .light {
-  background-color: #ffffff;
-  color: #333;
+  background-color: var(--color-light);
+  color: var(--color-dark);
   min-height: 100vh;
   padding: 20px;
 }
 
 .light .btn {
-  background: #e9ecef;
-  color: #333;
+  background: linear-gradient(
+    45deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  color: var(--color-text);
 }

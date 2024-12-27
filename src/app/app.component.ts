@@ -5,19 +5,11 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet],
-  template: `
-    <main>
-      <router-outlet></router-outlet>
-    </main>
-  `,
-  styles: [
-    `
-      main {
-        padding: 20px;
-      }
-    `,
-  ],
+  template: ` <main>
+    <router-outlet></router-outlet>
+  </main>`,
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'angular-starter';
+  title = 'my-app';
 }

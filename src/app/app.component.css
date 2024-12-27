@@ -1,0 +1,15 @@
+main {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(30, 60, 114, 0.1);
+}
+
+header {
+  /* ...existing code... */
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 1.5em;
+  border-bottom: 2px solid var(--color-secondary);
+}

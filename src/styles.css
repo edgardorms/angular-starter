@@ -1,4 +1,90 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Definición de variables de color */
+:root {
+  --color-primary: #1e3c72;
+  --color-secondary: #2a5298;
+  --color-accent: #0f1f38;
+  --color-light: #f0f4f8;
+  --color-dark: #0f1f38;
+  --color-text: #ffffff;
+  --color-text-dark: #0f1f38;
+}
+
+/* Aplicación de la paleta de colores */
+body {
+  /* ...existing styles... */
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h2 {
+  /* ...existing styles... */
+  color: var(--color-primary);
+}
+
+button.btn {
+  /* ...existing styles... */
+  background: linear-gradient(
+    45deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  color: var(--color-text);
+  box-shadow: 0 4px 6px rgba(30, 60, 114, 0.3);
+}
+
+button.btn:hover {
+  /* ...existing styles... */
+  background: linear-gradient(
+    45deg,
+    var(--color-secondary),
+    var(--color-primary)
+  );
+  transform: translateY(-3px);
+}
+
+.theme-btn {
+  /* ...existing styles... */
+  background: transparent;
+  border: 2px solid var(--color-text);
+}
+
+.dark {
+  /* ...existing estilos de tema oscuro... */
+  background-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+.dark .btn {
+  /* ...existing estilos de botón en tema oscuro... */
+  background: linear-gradient(45deg, var(--color-accent), var(--color-primary));
+  border: 2px solid var(--color-text);
+}
+
+.light {
+  /* ...existing estilos de tema claro... */
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+.light .btn {
+  /* ...existing estilos de botón en tema claro... */
+  background: linear-gradient(
+    45deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  color: var(--color-text);
+}
+
+/* Estilos para el encabezado */
+header {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 1.5em;
+  border-bottom: 2px solid var(--color-secondary);
+}
