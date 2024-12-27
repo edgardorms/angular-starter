@@ -1,4 +1,19 @@
-<iframe width="100%" height="600"
-    src="https://app.powerbi.com/view?r=eyJrIjoiOTIzZWRhY2YtMzVhZi00ZWU1LWIwMTEtYmRmNjg3NWUzMTcwIiwidCI6IjVkN2QwMjMyLWFmZjAtNGE4NC05MWVmLTVhOWMyMmU0OTVjYyIsImMiOjR9"
-    frameborder="0" allowFullScreen="true">
-</iframe>
+<div [class]="theme()">
+    <div class="controls">
+        <button (click)="toggleReport()" class="btn">
+            {{ isVisible() ? 'Ocultar Gráfico' : 'Mostrar Gráfico' }}
+        </button>
+        <button (click)="toggleTheme()" class="btn theme-btn">
+            {{ theme() === 'light' ? '🌙' : '☀️' }}
+        </button>
+    </div>
+
+    @if (isVisible()) {
+    <div class="report-container fade-in">
+        <iframe width="100%" height="600"
+            src="https://app.powerbi.com/view?r=eyJrIjoiOTIzZWRhY2YtMzVhZi00ZWU1LWIwMTEtYmRmNjg3NWUzMTcwIiwidCI6IjVkN2QwMjMyLWFmZjAtNGE4NC05MWVmLTVhOWMyMmU0OTVjYyIsImMiOjR9"
+            frameborder="0" allowFullScreen="true">
+        </iframe>
+    </div>
+    }
+</div>
